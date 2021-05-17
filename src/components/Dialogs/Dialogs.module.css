@@ -1,0 +1,21 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.userName{
+    padding: 10px;
+}
+
+.userDialog{
+    padding: 10px;
+}
+
+.dialogsItems a {
+    color: white;
+    text-decoration: none;
+}
+
+.dialogsItems a.activeLink {
+    color: black;
+}
