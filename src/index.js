@@ -3,39 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-let arrPost = [
-  {
-    content: "Hi, how are you?",
-    countLike: 24,
-    userImg:
-      "https://png.pngtree.com/png-clipart/20190906/original/pngtree-couple-avatar-girl-avatar-cartoon-cute-png-image_4567586.jpg",
-  },
-  {
-    content: "It is my first post",
-    countLike: 130,
-    userImg:
-      "https://png.pngtree.com/png-clipart/20190906/original/pngtree-couple-avatar-girl-avatar-cartoon-cute-png-image_4567586.jpg",
-  },
-];
-
-let arrUserName = [
-  { name: "Anton" },
-  { name: "Alex" },
-  { name: "Olia" },
-  { name: "Pasha" },
-  { name: "Katia" },
-];
-let arrUserDialog = [
-  "Hello, where are you disapire?",
-  "call me please",
-  "lets Rooock",
-  "London is a capital of Great Britani",
-];
+import state from "./Redux/state";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App arrPost={arrPost} arrUserName={arrUserName} arrUserDialog={arrUserDialog}/>
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -11,6 +11,12 @@
     padding: 10px;
 }
 
+.dialogsItems {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
 .dialogsItems a {
     color: white;
     text-decoration: none;
@@ -18,4 +24,14 @@
 
 .dialogsItems a.activeLink {
     color: black;
+}
+.dialogsItems img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.userSenderContainer {
+    color: rgb(184, 187, 181);
 }

@@ -4,13 +4,12 @@ import DialogsItem from "./DialogsItem/DialogsItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-
-  let dialogsUserElements = props.arrUserName.map((user, i) => {
+  let dialogsUserElements = props.dialogsPage.arrUserName.map((user, i) => {
     return <DialogsItem user={user} key={i} id={i} />;
   });
-  
-  let dialogsMessageElements = props.arrUserDialog.map((dia, i) => {
-    return <Message key={i} mes={dia} />;
+
+  let dialogsMessageElements = props.dialogsPage.arrUserDialogs.Anton.map((dia, i) => {
+    return <Message key={i} mes={dia.content} user={dia.sender} />;
   });
 
   return (
@@ -20,6 +19,5 @@ const Dialogs = (props) => {
     </div>
   );
 };
-
 
 export default Dialogs;
