@@ -1,4 +1,4 @@
-import { rerenderEntireTree } from "../render";
+
 
 let state = {
   dialogsPage: {
@@ -71,6 +71,14 @@ let state = {
     newPostValue: "",
   },
 };
+
+export let subscribe = (observer) => {
+  rerenderEntireTree = observer;
+}
+
+let rerenderEntireTree = () => {
+  
+}
 
 export let addNewPost = () => {
   let newPost = {
