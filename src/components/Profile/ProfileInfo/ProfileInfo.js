@@ -1,5 +1,5 @@
 import React from "react";
-import s from './ProfileInfo.module.css'
+import s from "./ProfileInfo.module.css";
 
 const ProfileInfo = () => {
   return (
@@ -10,9 +10,7 @@ const ProfileInfo = () => {
           alt="#"
         />
       </div>
-      <div className={s.profileInfoBlock}>
-          ava
-      </div>
+      <div className={s.profileInfoBlock}>ava</div>
     </div>
   );
 };
