@@ -1,6 +1,10 @@
 import React from "react";
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
+import {
+  addPostActionCreated,
+  onChangePostActionCreated,
+} from "./../../../redux/profileReduce";
 
 const MyPosts = (props) => {
   let myPostElements = props.arrPost.map((obj, i) => {
@@ -17,15 +21,15 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    if(newPostElement.current.value !== ''){
-      props.addNewPost();
+    if (newPostElement.current.value !== "") {
+      props.dispatch(addPostActionCreated());
     }
-   
   };
 
   let onChangeNewPost = () => {
     let textArea = newPostElement.current.value;
-    props.onChangeNewPost(textArea);
+
+    props.dispatch(onChangePostActionCreated(textArea));
   };
 
   return (

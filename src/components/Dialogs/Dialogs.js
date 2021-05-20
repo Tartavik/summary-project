@@ -2,6 +2,10 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogsItem from "./DialogsItem/DialogsItem";
 import Message from "./Message/Message";
+import {
+  onChangeDialogActionCreated,
+  addMessageActionCreated,
+} from "./../../redux/dialogsReduce";
 
 const Dialogs = (props) => {
   let dialogsUserElements = props.dialogsPage.arrUserName.map((user, i) => {
@@ -14,16 +18,14 @@ const Dialogs = (props) => {
     }
   );
 
-  let newMessageElement = React.createRef();
-
   let addMessage = () => {
-    props.addNewMessage();
+    props.dispatch(addMessageActionCreated());
   };
 
-  let onChangeNewDialog = () => {
-    let textArea = newMessageElement.current.value;
+  let onChangeNewDialog = (e) => {
+    let textArea = e.target.value;
 
-    props.onChangeNewDialog(textArea);
+    props.dispatch(onChangeDialogActionCreated(textArea));
   };
 
   return (
@@ -34,7 +36,6 @@ const Dialogs = (props) => {
       </div>
       <div>
         <textarea
-          ref={newMessageElement}
           onChange={onChangeNewDialog}
           value={props.dialogsPage.newDialogValue}
         ></textarea>
