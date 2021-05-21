@@ -24,6 +24,7 @@ const MyPosts = (props) => {
     if (newPostElement.current.value !== "") {
       props.dispatch(addPostActionCreated());
     }
+    console.log('sdf');
   };
 
   let onChangeNewPost = () => {
