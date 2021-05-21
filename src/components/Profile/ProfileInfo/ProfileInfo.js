@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./ProfileInfo.module.css";
-
+console.log('sdf');
 const ProfileInfo = () => {
   return (
     <div>
